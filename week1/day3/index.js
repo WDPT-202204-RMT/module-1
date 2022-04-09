@@ -1,9 +1,9 @@
 // slice and substring.
 
 let str = 'thiseee is a tast';
-
-console.log(str.slice(-3, -1));
-console.log(str.substring(-1, 5));
+// they do the same thing
+// console.log(str.slice(-3, -1)); // can you negative values
+// console.log(str.substring(-3, -1));
 
 //function
 // concept DRY ==> Don't repaet yourself
@@ -75,18 +75,18 @@ function addWithReturn(nb1, nb2) {
   return nb1 + nb2;
 }
 
-add(5, 5);
+// add(5, 5);
 let var2 = addWithReturn(5, 5); // this is equal to 10
-console.log(var2);
+//console.log(var2);
 
 let result = addWithReturn(2, 5);
-console.log(result);
+//console.log(result);
 
 // let result = add(5, 5);
 // console.log(result);
 
 // chain functions together.
-console.log(addWithReturn(5, 5) + addWithReturn(2, 2));
+//console.log(addWithReturn(5, 5) + addWithReturn(2, 2));
 
 const test = function () {
   console.log('hello');
@@ -95,7 +95,7 @@ const test = function () {
   console.log('this is a test');
 };
 
-test();
+//test();
 
 // function checkAge(age) {
 //   if (age > 18) {
@@ -116,7 +116,7 @@ function checkAge(age) {
   return age > 18 ? 'you are an adult' : 'you are an adult';
 }
 
-console.log(checkAge(19));
+//console.log(checkAge(19));
 
 // function that returns more than one thing
 // don't focus on this for now
@@ -134,4 +134,104 @@ function getUserInfo(firstName, lastName) {
   return userInfo;
 }
 
-console.log(getUserInfo('Enes', 'Koc'));
+//console.log(getUserInfo('Enes', 'Koc'));
+
+// Now it's time to work this Arrays ! // Data structure
+
+let student1 = 'Sarah';
+let stduent2 = 'Tanvi';
+let student3 = 'Natalia';
+
+let students = ['Sarah', 'Tanvie', 'Natalia', 'Ihab', 'Jan'];
+
+console.log(students);
+
+// I want the first stuend of the list/array
+
+console.log(students[1]);
+
+// I want the length of my array
+
+console.log(students.length);
+
+// I want to get the last element of an array
+
+console.log(students.length - 1);
+console.log(students[students.length - 1]);
+
+// I want to add a new student to the list
+
+students.push(32);
+//students.push(['Test']); Double dimension arrays // not for now
+
+// I want to remove the LAST element of the array / list.
+students.pop();
+
+// I want to add a new element to the BEGINNING of the list.
+
+students.unshift('New students');
+
+// I want to remove the FIRST element of the list.
+
+students.shift();
+
+console.log(students);
+
+// I want to loop of the array.
+// First way
+
+// for (let i = 0; i < students.length; i++) {
+//   console.log('Value of i in the loop: ' + i);
+//   console.log(students[i]);
+// }
+
+// The second way of doing things
+
+// for (let name of students) {
+//   console.log(name);
+// }
+
+// let i = 0;
+
+// while (i < students.length) {
+//   console.log('Value of i in the loop: ' + i);
+//   console.log(students[i]);
+//   i++;
+// }
+
+//NOT RECOMMENDED
+// let i = -1;
+
+// while (i++ < students.length - 1) {
+//   console.log('Value of i in the loop: ' + i);
+//   console.log(students[i]);
+// }
+
+// Foreach
+
+// students.forEach((name, i) => {
+//   console.log(i);
+//   console.log(name.toUpperCase());
+// });
+
+//we want to make all the names Uppercase
+//let new_array = [];
+
+// students.forEach((name) => {
+//   new_array.push(name.toUpperCase());
+// });
+
+// for (let name of students) {
+//   new_array.push(name.toLowerCase());
+// }
+
+// Now, the best wahy of doig this .map
+
+// let new_array = students.map((name, i) => {
+//   //console.log(i);
+//   return name.toUpperCase();
+// });
+
+console.log(students);
+// console.log(students.slice(1, 4)); // this cuts the array.
+// console.log(students.splice(3, 1, 'New students'));
