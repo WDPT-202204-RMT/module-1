@@ -235,3 +235,4 @@ console.log(students);
 console.log(students);
 // console.log(students.slice(1, 4)); // this cuts the array.
 // console.log(students.splice(3, 1, 'New students'));
+// make a change
