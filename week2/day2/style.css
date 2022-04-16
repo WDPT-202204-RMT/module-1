@@ -1,7 +1,120 @@
-/* * {
-  border: 2px solid black;
-}
-
 body {
   padding: 10px;
+}
+
+label {
+  background-color: blue;
+}
+
+ol {
+  /* This will remove the dots or the numbers befor the list items */
+  list-style: none;
+}
+
+/* This is for selecting all the elements on the page */
+/* * {
+  border: 2px solid black;
 } */
+
+/* This is for selectiond THE id */
+#main_title {
+  border: 1px solid red;
+}
+
+/* This is for selecting the elementS that have the CLASS title */
+.title {
+  color: purple;
+}
+
+li {
+  /* color: salmon; */
+  /* color: rgb(250, 128, 114); */
+  /* color: #fa8072; */
+  /* color: rgba(255, 128, 114, 0.75); */
+  /* color: hsl(6, 93%, 71%); */
+  /* color: hsla(6, 93%, 71%, 1);
+  background-color: yellow; */
+}
+
+/* Selecting Descendants */
+
+/* parent > child {
+    style
+} */
+
+#o_list > li {
+  color: hsla(6, 93%, 71%, 1);
+  background-color: yellow;
+}
+
+ol li {
+  border: 1px solid black;
+}
+
+div {
+  /* background-color: green; */
+}
+
+#former {
+  background-color: red;
+}
+
+/* main + targetElement (this is the sibling) {
+    style
+} */
+
+#former + div {
+  background-color: yellow;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  /* Important overwrite older style */
+  background-color: aquamarine !important;
+}
+
+/* 
+    Take all the children of .todo-list
+    THEN take the fist sibling oh h2 that has the class .red-box
+    THEN all the h2 elements
+
+ */
+.todo-list > li,
+h2 + .red-box,
+h2 {
+  background-color: yellow;
+}
+
+a[href^='https'] {
+  background-color: red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #3838ff;
+  animation-name: slides;
+  animation-duration: 1s;
+  /* animation-iteration-count: infinite; */
+}
+
+.box:hover {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
+@keyframes slides {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
