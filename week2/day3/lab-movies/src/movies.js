@@ -95,28 +95,32 @@ function bestYearAvg(movies) {
 
   movies.forEach((movie) => {
     if (!yearScore.find((year) => year.year === movie.year)) {
+      // check that we don't have an element for the year we are looking at
       yearScore.push({
+        // if not, create it
         year: movie.year,
         movies: 1,
         score: movie.score
       });
     } else {
-      const index = yearScore.findIndex((year) => year.year === movie.year);
+      const index = yearScore.findIndex((year) => year.year === movie.year); // if it already exists, let's add one more movie for this year and add its score to the total
       yearScore[index]['movies'] += 1;
       yearScore[index]['score'] += movie.score;
     }
   });
   yearScore.sort((a, b) => {
-    let averageA = parseFloat(a.score) / parseFloat(a.movies);
+    let averageA = parseFloat(a.score) / parseFloat(a.movies); //calculate average for each 2 years
     let averageB = parseFloat(b.score) / parseFloat(b.movies);
     if (averageA === averageB) {
+      // if two years have the same score, prioritize the oldest
       return parseFloat(a.year) - parseFloat(b.year);
     }
-    return averageB - averageA;
+    return averageB - averageA; // if not, simply put the highest on top
   });
   let yearAverage = (
     parseFloat(yearScore[0].score) / parseFloat(yearScore[0].movies)
-  ).toFixed(2);
+  ) // recalculate the average for the chosen year; we could have done this calculation and stored it in each year data structure
+    .toFixed(2);
   return `The best year was ${
     yearScore[0].year
   } with an average score of ${parseFloat(yearAverage)}`;
