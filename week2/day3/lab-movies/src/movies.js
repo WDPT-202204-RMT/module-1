@@ -58,7 +58,7 @@ function orderAlphabetically(movies) {
   let orderedMovies = [...movies];
   orderedMovies.sort((a, b) => a.title.localeCompare(b.title));
 
-  //Extracts the first 20's titles alphabetically
+  //Extracts the first 20 titles from the ordered list
   let sortedTitles = orderedMovies.map((el) => el.title);
   return sortedTitles.splice(0, 20);
 }
@@ -69,15 +69,19 @@ function turnHoursToMinutes(movies) {
     let formattedDuration = 0; // start at 0
     let splitHoursMinutes = movie.duration.split(' ', 2);
     if (splitHoursMinutes.length === 2) {
+      // do we have hours and minutes ?
       if (splitHoursMinutes[0].includes('h')) {
-        formattedDuration += 60 * parseInt(splitHoursMinutes[0].split('h')[0]);
+        const hours = splitHoursMinutes[0].split('h')[0]; // get the numeric value for hours
+        formattedDuration += 60 * parseInt(hours);
       }
       if (splitHoursMinutes[1].includes('min')) {
-        formattedDuration += parseInt(splitHoursMinutes[1].split('min')[0]);
+        const minutes = splitHoursMinutes[1].split('min')[0]; // get the numeric value for minutes in 2nd element of array
+        formattedDuration += parseInt(minutes);
       }
     } else {
       if (splitHoursMinutes[0].includes('h')) {
-        formattedDuration += 60 * parseInt(splitHoursMinutes[0].split('h')[0]);
+        const hours = splitHoursMinutes[0].split('h')[0];
+        formattedDuration += 60 * parseInt(hours);
       }
     }
     return { ...movie, duration: formattedDuration };
