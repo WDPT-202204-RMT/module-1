@@ -1,0 +1,129 @@
+/*
+Colors:
+
+Text: 1A1A1A
+Green: #00B172
+White: #FFF
+
+*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.navbar__logo {
+  width: auto;
+  height: 100px;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__menu li {
+  margin-left: 10px;
+}
+
+.hero {
+  margin-top: 100px;
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/images/landing.jpg");
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__description {
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.features__headline {
+  width: fit-content;
+  align-self: center;
+  border-bottom: 2px solid #00b172;
+}
+
+.features__columns {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.features__column {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features__column-icon {
+  height: auto;
+  width: 100px;
+}
+
+.features__column-title {
+  color: #00b172;
+}
+
+.features__column-text {
+  text-align: center;
+}
+
+.kanye {
+  background-color: #00b172;
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.kanye-icon {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+}
+
+.kanye__text {
+  width: 50%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.kanye__text-headline {
+  border-bottom: 2px solid #fff;
+  width: fit-content;
+}
+
+.kanye__player {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kanye__player-image {
+  height: 100%;
+  width: auto;
+  margin: 70px;
+}
