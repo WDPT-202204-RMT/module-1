@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Trying out jest",
+  "main": "foo.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Enes",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
