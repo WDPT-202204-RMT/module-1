@@ -1,0 +1,14 @@
+.btn-primary {
+  background-color: salmon;
+  border-color: salmon;
+}
+
+.col {
+  border: solid 1px red;
+  /* margin: 2px; */
+}
+
+.row {
+  border: solid 1px black;
+  margin-top: 5px;
+}
